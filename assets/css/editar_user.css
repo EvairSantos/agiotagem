@@ -1,0 +1,100 @@
+/* Estilização do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a192f;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+/* Estilização do título */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Estilização do formulário */
+form {
+    max-width: 800px; /* Largura máxima para desktop */
+    width: 100%;
+    background-color: #112240;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex; /* Flexbox para o layout da foto */
+    flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
+}
+
+/* Estilização da foto do usuário */
+img {
+    max-width: 150px; /* Largura fixa para a foto */
+    height: auto;
+    margin-right: 20px; /* Espaçamento entre a foto e os campos */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilização dos rótulos */
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    width: 100%; /* Faz o rótulo ocupar toda a largura */
+}
+
+/* Estilização dos campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="file"],
+input[type="password"] {
+    width: 100%; /* Ajusta a largura para 100% */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #1e2a47;
+    color: white;
+}
+
+/* Estilização do botão */
+button {
+    background-color: #00a8e8;
+    color: white;
+    padding: 12px; /* Mantém uma altura padrão */
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px; /* Espaçamento superior */
+    width: 100%; /* Botão ocupa toda a largura */
+    box-sizing: border-box; /* Para garantir que o padding não quebre a largura */
+}
+
+button:hover {
+    background-color: #0077b6;
+}
+
+/* Estilização de mensagens de erro ou sucesso */
+.message {
+    color: #00a8e8;
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    form {
+        flex-direction: column; /* Muda para coluna em dispositivos móveis */
+        padding: 15px;
+    }
+
+    img {
+        margin: 0 auto 20px; /* Centraliza a imagem em dispositivos móveis */
+    }
+}
+
+/* Permite a rolagem quando necessário */
+html, body {
+    height: auto; /* Altura automática */
+    overflow: auto; /* Permite rolagem se necessário */
+}

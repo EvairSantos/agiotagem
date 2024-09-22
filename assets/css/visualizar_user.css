@@ -1,0 +1,146 @@
+/* Estilização do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a192f;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+/* Estilização da seção de informações do usuário */
+.informacoes-usuario {
+    display: flex; /* Usando flexbox para alinhar foto e informações */
+    align-items: center; /* Alinha verticalmente ao centro */
+    max-width: 800px; /* Largura máxima */
+    margin: auto; /* Centraliza no meio da tela */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #112240;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.usuario-info {
+    flex: 1; /* Ocupa o espaço restante */
+    margin-right: 20px; /* Espaço entre as informações e a foto */
+}
+
+.usuario-foto img {
+    max-width: 150px; /* Largura máxima da foto */
+    height: auto; /* Manter proporção */
+    border-radius: 10px; /* Cantos arredondados na imagem */
+}
+
+/* Adicionando linhas de divisão nas informações do usuário */
+.informacoes-usuario p {
+    border-bottom: 1px solid #ffffff; /* Linha de divisão */
+    padding: 10px 0; /* Espaçamento vertical */
+}
+
+.informacoes-usuario p:last-child {
+    border: none; /* Remove a linha do último parágrafo */
+}
+
+/* Estilização da foto do usuário */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+    border-radius: 10px; /* Cantos arredondados na imagem */
+}
+
+/* Remover sublinhado de hyperlinks */
+a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor do texto */
+}
+
+/* Estilização do botão "Editar" e "Ver no mapa" */
+.btn-editar,
+.btn-mapa {
+    background-color: transparent; /* Fundo transparente */
+    color: #00a8e8; /* Cor do texto */
+    border: 2px solid #ffffff; /* Borda branca */
+    padding: 5px 10px; /* Melhor usabilidade */
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    text-align: center;
+    display: inline-block; /* Mantém o botão como um bloco */
+    margin-top: 5px; /* Espaçamento superior */
+}
+
+.btn-editar:hover,
+.btn-mapa:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efeito de hover */
+    transform: translateY(-2px); /* Elevação ao passar o mouse */
+}
+
+/* Estilização da tabela de empréstimos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #112240; /* Fundo da tabela */
+    border-radius: 10px;
+    overflow: hidden; /* Para cantos arredondados */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ffffff; /* Linhas entre as células */
+}
+
+/* Estilização dos cabeçalhos da tabela */
+th {
+    background-color: #00a8e8; /* Fundo dos cabeçalhos */
+    color: white;
+    font-weight: bold; /* Negrito nos cabeçalhos */
+}
+
+/* Estilização das células */
+td {
+    background-color: #1e2a47; /* Fundo das células */
+    color: white;
+}
+
+/* Estilização das linhas ao passar o mouse */
+tr:hover {
+    background-color: #0077b6; /* Cor ao passar o mouse */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block; /* Cada parte se torna um bloco */
+    }
+
+    thead {
+        display: none; /* Esconde o cabeçalho em dispositivos móveis */
+    }
+
+    tr {
+        margin-bottom: 10px; /* Espaço entre as linhas */
+    }
+
+    td {
+        text-align: right; /* Alinhamento das células */
+        position: relative; /* Posição relativa para os rótulos */
+        padding-left: 50%; /* Espaçamento à esquerda para os rótulos */
+    }
+
+    td::before {
+        content: attr(data-label); /* Usa o rótulo do data-label */
+        position: absolute; /* Posição absoluta para o rótulo */
+        left: 10px; /* Largura do rótulo */
+        width: calc(50% - 20px); /* Largura do rótulo */
+        padding: 5px; /* Espaçamento */
+        font-weight: bold; /* Negrito para o rótulo */
+        color: #00a8e8; /* Cor do rótulo */
+        text-align: left; /* Alinhamento do rótulo */
+    }
+}
